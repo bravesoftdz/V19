@@ -2383,6 +2383,10 @@ begin
     begin
       THDbEdit(GetControl('AFF_RESSOURCE3')).OnElipsisClick := BRechResponsable;
     end;
+  end else if (VH_GC.BTCODESPECIF='002') and (StatutAffaire = 'AFF') then
+  begin
+    // Specif VERDON
+    TTabSheet(GetControl('TSINTERVVERDON')).TabVisible := true;
   end else
   begin
     //FV1 - 14/06/2016 - FS#2023 - En fiche affaire, la recherche sur responsable ne fonctionne plus
